@@ -69,8 +69,8 @@ function Snakedatapage() {
       
       <Form onSubmit={getPost}>
       <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Name:</Form.Label>
-        <Form.Control type="text" placeholder="Enter Name" value={snakeHostName} onChange={(e)=>setSnakeHostName(e.target.value)}/>
+        <Form.Label>Hospital Name:</Form.Label>
+        <Form.Control type="text" placeholder="Enter Hospital Name" value={snakeHostName} onChange={(e)=>setSnakeHostName(e.target.value)}/>
         
       </Form.Group>
 

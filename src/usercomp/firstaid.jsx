@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 function Firstaid() {
+  const src =
+  "assets/video/DogBite.mp4";
   return (
     <div className="p-3 mb-2 bg-light text-dark">
     <div className="container-fluid container-xl d-flex align-items-center bg-success justify-content-between">
@@ -17,8 +19,13 @@ function Firstaid() {
     <br />
      <h1 > How to Treat a Dog Bite</h1>
 <br />
+<video controls width="100%">
+      <source src={src} type="video/mp4" />
+      Sorry, your browser doesn't support embedded videos.
+    </video>
 <p className='h2'>Treating a dog bite</p>
 <br />
+
 
 <p>If you’ve been bitten by a dog, it’s important to tend to the injury right away to reduce your risk of bacterial infection. You also should assess the wound to determine the severity.</p>
 

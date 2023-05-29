@@ -64,8 +64,8 @@ function Dogdatapage() {
     <div className="justify-content-center align-items-center">
       <Form onSubmit={getPost}>
       <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Name:</Form.Label>
-        <Form.Control type="text" placeholder="Enter Name" value={dogHostName} onChange={(e)=>setdogHostName(e.target.value)}/>
+        <Form.Label>Hospital Name:</Form.Label>
+        <Form.Control type="text" placeholder="Enter Hospital Name" value={dogHostName} onChange={(e)=>setdogHostName(e.target.value)}/>
         
       </Form.Group>
 

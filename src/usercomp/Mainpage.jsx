@@ -1,17 +1,25 @@
 import React ,{useEffect}from 'react'
 import { Link } from 'react-router-dom';
-//import { onAuthStateChanged } from 'firebase/auth';
 import { useState } from 'react';
 import { useAuthState } from "react-firebase-hooks/auth"
 import { auth , db} from "../Firebase/firebaseconfig";
 import {  setDoc,doc,updateDoc } from 'firebase/firestore'  
 import { Form ,Button} from 'react-bootstrap';
+import { signOut } from 'firebase/auth';
+import { useNavigate } from "react-router-dom";
+import MedicalServicesIcon from '@mui/icons-material/MedicalServices';
+import VaccinesIcon from '@mui/icons-material/Vaccines';
+import MinorCrashIcon from '@mui/icons-material/MinorCrash';
+import SupportIcon from '@mui/icons-material/Support';
+import HealthAndSafetyIcon from '@mui/icons-material/HealthAndSafety';
 
 function Mainpage() {
   
   const [review,setReview] = useState("")
   
   const [user]  = useAuthState(auth); 
+  
+  let navigate= useNavigate();
 
   const go = (e) =>{
     e.preventDefault();
@@ -28,6 +36,13 @@ function Mainpage() {
     };
     createReview();
   }
+
+  const logout = () => {
+    signOut(auth);
+    alert("Thank you for visiting")
+    navigate('/');
+
+  };
   
   return (
     <><div>
@@ -40,17 +55,9 @@ function Mainpage() {
 
             <h1>Rescuera<span>.</span></h1>
           </div>
-          <nav id="navbar" className="navbar">
-            <ul>
-              <li>Home</li>
-              
-             
-              <li>Blog</li>
-              
-            </ul>
+          <nav style={{paddingLeft:123}}  id="navbar" className="navbar">
+              <Button  onClick={logout}>logout</Button>    
           </nav>
-
-          
 
          </div>
           </header><section id="hero" className="hero"/>{/*section onil closi*/}
@@ -73,9 +80,9 @@ function Mainpage() {
             <div className="container position-relative">
               <div className="row gy-4 mt-5">
 
-                <div className="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div  className="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
                   <div className="icon-box">
-                    <div className="icon"><i className="bi bi-command"></i></div>
+                    <div className="icon"><MedicalServicesIcon></MedicalServicesIcon></div>
                     <h4 className="title"><Link to="/Snakeaid">First Aid For Snake Bite</Link></h4>
                   </div>
                 </div>
@@ -83,7 +90,7 @@ function Mainpage() {
                
                 <div className="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
                   <div className="icon-box">
-                    <div className="icon"><i className="bi bi-command"></i></div>
+                    <div className="icon"><VaccinesIcon></VaccinesIcon></div>
                     <h4 className="title"><Link to="/Snakehostcont">Snake Bite Treatment</Link></h4>
                   </div>
                 </div>
@@ -91,14 +98,14 @@ function Mainpage() {
 
                 <div className="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
                   <div className="icon-box">
-                    <div className="icon"><i className="bi bi-command"></i></div>
+                    <div className="icon"><MinorCrashIcon></MinorCrashIcon></div>
                     <h4 className="title"><Link to="/Taxicontact">Emergency Vehicle</Link></h4>
                   </div>
                 </div>
 
                 <div className="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
                   <div className="icon-box">
-                    <div className="icon"><i className="bi bi-command"></i></div>
+                    <div className="icon"><VaccinesIcon></VaccinesIcon></div>
                     <h4 className="title"><Link to="/Doghostcont">Dog Bite Treatment</Link></h4>
                   </div>
                 </div>
@@ -106,14 +113,14 @@ function Mainpage() {
 
                 <div className="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="500">
                   <div className="icon-box">
-                    <div className="icon"><i className="bi bi-command"></i></div>
+                    <div className="icon"><SupportIcon></SupportIcon></div>
                     <h4 className="title"><Link to="/Handcontact">Snake Handler</Link></h4>
                   </div>
                 </div>
 
                 <div className="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="500">
                   <div className="icon-box">
-                    <div className="icon"><i className="bi bi-command"></i></div>
+                    <div className="icon"><HealthAndSafetyIcon></HealthAndSafetyIcon></div>
                     <h4 className="title"><Link to="">Health Insurance</Link></h4>
                   </div>
                 </div>
@@ -126,12 +133,6 @@ function Mainpage() {
         </>
     <main id="main">
 
-
-        
-
-
-        
-
         <section id="contact" className="contact">
           <div className="container" data-aos="fade-up">
 
@@ -143,7 +144,6 @@ function Mainpage() {
                 <Form onSubmit={go}>
                   <div className="row">
                     
-                    
                   </div>
                   
                   <div className="form-group mt-3">
@@ -152,10 +152,7 @@ function Mainpage() {
                   <br />
                   <div className="text-center"><Button type="submit" className="p-3 mb-2 bg-success text-white">Send Review</Button></div>
                 </Form>
-              </div>
-              
-
-          
+              </div> 
         </section>
 
       </main><footer id="footer" className="footer">
@@ -169,12 +166,6 @@ function Mainpage() {
               
               
             </div>
-
-           
-
-            
-
-
           </div>
         </div>
 

@@ -31,14 +31,15 @@ const signin = (e)=>{
 }
 }
   return (
+    <div style={{paddingTop:100,color:'#006400'}}>
     <div style={{backgroundColor:"#00b075",
-    backgroundImage: 'url("https://www.transparenttextures.com/patterns/asfalt-dark.png")',borderRadius:30}}>
-       <div className="row mb-4">
-         <div className="col-md-6 d-flex justify-content-center">
-         <h1>Login</h1>
+    borderRadius:30}}>
+        <br />
+         <div className=" d-flex justify-content-center">
+         <h1 style={{color:"#ffffff",paddingTop:20}}>Login</h1>
           </div>
        
-        </div>
+        
     
     <MDBContainer className="my-5 d-flex justify-content-center">
       <img
@@ -67,6 +68,7 @@ const signin = (e)=>{
       </Form>
 
       </div>   
+    </div>
     </div>
   )
 }

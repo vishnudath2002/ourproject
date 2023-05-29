@@ -6,20 +6,19 @@ import "rsuite/dist/rsuite.min.css";
 import { MDBContainer } from 'mdb-react-ui-kit';
 function Firstpage() {
   return (
-    <div style={{backgroundColor:"#00b075",
-    backgroundImage: 'url("https://www.transparenttextures.com/patterns/asfalt-dark.png")',height:"100%",borderRadius:30}}>
+    <div style={{backgroundColor:"#00b075",borderRadius:30,height:1000}}>
     <br />
-    <h1 className=" d-flex justify-content-center">Rescuera</h1>
+    <h1 style={{color:"#ffffff"}} className=" d-flex justify-content-center">RESCURA</h1>
     <MDBContainer className="my-5 d-flex justify-content-center">
 <img
-  src="https://png.pngtree.com/png-clipart/20200224/original/pngtree-cute-dog-avatar-with-a-yellow-background-png-image_5205691.jpg"
+  src="assets/img/Picsart_23-03-03_15-54-35-672.jpg"
   className="rounded-circle"
   style={{height:"198px",width:"198px"}}
   alt="Avatar"
 />
 </MDBContainer>
 <div>
-       <h1>Who Are You:</h1>
+       <h1>Who Are You?</h1>
        </div>
        
        <br />

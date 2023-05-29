@@ -48,19 +48,21 @@ function Usersignup() {
 
  
   return (
+    <div style={{paddingTop:80}}>
   <div style={{backgroundColor:"#00b075",
-  backgroundImage: 'url("https://www.transparenttextures.com/patterns/asfalt-dark.png")',borderRadius:30}}>
+  borderRadius:30}}>
      
          <div className=" d-flex justify-content-center">
-         <h1>SignUp</h1>
+         <h1 style={{color:"#ffffff",paddingTop:20}}>SignUp</h1>
          
          </div>
 
          <MDBContainer className="my-5 d-flex justify-content-center">
       <img
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmPMqmhCs3WJiUvLOkJnw_Ol4RYS2kV3YTjQ&usqp=CAU"
-        className="rounded-circle"
-        alt="Avatar"
+         src="/assets/img/uselog.jpg"
+  className="rounded-circle"
+  style={{height:"198px",width:"198px"}}
+  alt="Avatar"
       />
     </MDBContainer>
         
@@ -95,6 +97,7 @@ function Usersignup() {
       </Form>
       
       </div>
+    </div>
     </div>
   )
 }

@@ -46,6 +46,7 @@ function Handupdate() {
     
     const getHandlerData = async () => {
       try {
+        const uuid = user.uid; 
         const q = query(collection(db,"handlers"), where("userId", "==", uuid));
         const data = await getDocs(q);
         

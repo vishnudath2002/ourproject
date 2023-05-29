@@ -23,21 +23,23 @@ const signin = (e)=>{
 }
 }
   return (
+    <div style={{paddingTop:100}}>
     <div style={{backgroundColor:"#00b075",
-    backgroundImage: 'url("https://www.transparenttextures.com/patterns/asfalt-dark.png")',borderRadius:30}}>
-    <div className="row mb-4">
-         <div className="col-md-6 d-flex justify-content-center">
-         <h1>Login</h1>
+    borderRadius:30}}>
+    
+         <div className=" d-flex justify-content-center">
+         <h1 style={{color:"#ffffff",paddingTop:20}}>Login</h1>
          
-         </div>
+         
 
        
         </div>
         
         <MDBContainer className="my-5 d-flex justify-content-center">
       <img
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmPMqmhCs3WJiUvLOkJnw_Ol4RYS2kV3YTjQ&usqp=CAU"
+        src="assets/img/hoslogi.jpg"
         className="rounded-circle"
+        style={{height:"198px",width:"198px"}}
         alt="Avatar"
       />
     </MDBContainer>
@@ -60,19 +62,20 @@ const signin = (e)=>{
         </Form.Group>
        
         <br />
-        <div className="row mb-4">
-         <div className="col-md-6 d-flex justify-content-center">
+        
+         <div className=" d-flex justify-content-center">
          <Link to="/Hostsignup">SignUp</Link>
          
          </div>
 
        
-        </div>
+        
         
         
       </Form>
      </div>
-	</div>
+	 </div>
+  </div>
   )
 }
 

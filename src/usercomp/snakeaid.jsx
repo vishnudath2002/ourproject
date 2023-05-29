@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 function Snakeaid() {
+  const src =
+  "assets/video/SnakeBite.mp4";
   return (
     <div className="p-3 mb-2 bg-light text-dark">
     <div className="container-fluid container-xl d-flex align-items-center bg-success justify-content-between">
@@ -13,6 +15,10 @@ function Snakeaid() {
      </div>
         <h1>Snakebite Treatment</h1>
         <br />
+        <video controls width="100%">
+      <source src={src} type="video/mp4" />
+      Sorry, your browser doesn't support embedded videos.
+    </video>
         <h3>1. Note the Snake's Appearance</h3>
 <ul>
 <li>Be ready to describe the snake to emergency staff.</li>
