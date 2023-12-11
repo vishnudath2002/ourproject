@@ -10,13 +10,7 @@ import { getStorage } from "@firebase/storage";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyA2jYXN7vdLVJY511coQQLjf8xeAoPY1pw",
-  authDomain: "rescura-web.firebaseapp.com",
-  projectId: "rescura-web",
-  storageBucket: "rescura-web.appspot.com",
-  messagingSenderId: "163446252211",
-  appId: "1:163446252211:web:78d55f3beca09aaf0f06c6",
-  measurementId: "G-N2DNXY56Q1"
+ 
 };
 
 // Initialize Firebase
